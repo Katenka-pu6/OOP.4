@@ -23,3 +23,11 @@ public class market implements QueueBehaviour, MarketBehaviour {
     public String dequeue() {
         return queue.poll();
     }
+
+    @Override
+    public void addPersonToQueue(String person) {
+        queue.add(person);
+        System.out.println(person + " added to the queue.");
+    }
+
+    
