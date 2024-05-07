@@ -42,4 +42,19 @@ public class market implements QueueBehaviour, MarketBehaviour {
         }
     }
 
-    
+    public void update() {
+        System.out.println("Market status updated.");
+    }
+
+    public static void main(String[] args) {
+        market market = new market();
+
+        market.addPersonToQueue("Alice");
+        market.addPersonToQueue("Bob");
+
+        market.servePerson();
+        market.servePerson();
+
+        market.update();
+    }
+} 
