@@ -18,4 +18,8 @@ public class market implements QueueBehaviour, MarketBehaviour {
     public void enqueue(String person) {
         queue.add(person);
     }
-  
+ 
+    @Override
+    public String dequeue() {
+        return queue.poll();
+    }
