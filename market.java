@@ -14,4 +14,8 @@ interface MarketBehaviour {
 public class market implements QueueBehaviour, MarketBehaviour {
     private Queue<String> queue = new LinkedList<>();
 
-    
+    @Override
+    public void enqueue(String person) {
+        queue.add(person);
+    }
+  
