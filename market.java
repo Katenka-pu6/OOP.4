@@ -11,3 +11,7 @@ interface MarketBehaviour {
     String servePerson();
 }
 
+public class market implements QueueBehaviour, MarketBehaviour {
+    private Queue<String> queue = new LinkedList<>();
+
+    
