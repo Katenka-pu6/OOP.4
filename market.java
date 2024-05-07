@@ -30,4 +30,16 @@ public class market implements QueueBehaviour, MarketBehaviour {
         System.out.println(person + " added to the queue.");
     }
 
+    @Override
+    public String servePerson() {
+        if (!queue.isEmpty()) {
+            String person = queue.poll();
+            System.out.println(person + " served.");
+            return person;
+        } else {
+            System.out.println("No one in the queue.");
+            return null;
+        }
+    }
+
     
